@@ -1,10 +1,76 @@
 package Veterinaria.BD203422.model;
 
-import Veterinaria.BD203422.model.Mascota;
-import org.springframework.data.repository.CrudRepository;
+import javax.persistence.*;
 
-import java.util.List;
+@Entity
+@Table(name = "mascota")
+public class Mascota {
 
-public interface MascotaRepository extends CrudRepository<Mascota, Integer> {
-    List<Mascota> findAll();
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idMascota;
+
+    @Column(name = "nombre")
+    private String nombre;
+
+    @Column(name = "tipo")
+    private String tipo;
+
+    @Column(name = "fechaIngreso")
+    private String fechaIngreso;
+
+    @Column(name = "razon")
+    private String razon;
+
+    public Mascota(){
+
+    }
+
+    public Mascota(int idMascota, String nombre, String tipo, String fechaIngreso, String razon){
+        this.idMascota = idMascota;
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.fechaIngreso = fechaIngreso;
+        this.razon = razon;
+    }
+
+    public int getIdMascota() {
+        return idMascota;
+    }
+
+    public void setIdMascota(int idMascota) {
+        this.idMascota = idMascota;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getFechaIngreso() {
+        return fechaIngreso;
+    }
+
+    public void setFechaIngreso(String fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
+    }
+
+    public String getRazon() {
+        return razon;
+    }
+
+    public void setRazon(String razon) {
+        this.razon = razon;
+    }
 }
