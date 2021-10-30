@@ -38,3 +38,9 @@ insert into mascota (nombre, tipo, fechaIngreso, razon)
 
 insert into duenio (nombre, telefono, direccion)
     values ('Ernesto', '9614587810', 'Colonia los pinos');
+
+insert into cita (fecha, hora, servicio)
+    values ('19/08/2021', '06:15 PM', 'JSJSJSJS');
+
+insert into medicamento (nombre, codigo, fechaCaducidad, sustanciaActiva)
+    values ('Paracetamol', 'PTMOL14785', '09/12/2021', 'activa');
