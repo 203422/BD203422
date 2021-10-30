@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface MascotaRepository extends CrudRepository<Mascota, Integer> {
     List<Mascota> findAll();
+    Mascota save(Mascota mascota);
 }
